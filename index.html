@@ -1,91 +1,220 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agencio - Creative Agency</title>
+    <meta name="description" content="Agencio is a creative agency delivering innovative digital solutions to grow your business." />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
-    >
+    />
+    <link href="styles.css" rel="stylesheet" />
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Main navigation">
       <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <a class="navbar-brand fw-bold" href="#">Agencio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Dropdown</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
+            <li class="nav-item">
+              <a class="nav-link active" href="#services" aria-current="page">Services</a>
             </li>
-            <li class="nav-item"><a class="nav-link disabled">Disabled</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search">
+          <form class="d-flex" role="search" aria-label="Site search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
       </div>
     </nav>
 
-    <div class="container my-5">
-      <h1>Hello, world!</h1>
-      <div class="col-lg-8 px-0">
-        <p class="fs-5">
-          You've successfully loaded up the Bootstrap starter example.
+    <header class="bg-primary text-light py-5">
+      <div class="container text-center">
+        <h1 class="display-4 fw-bold">Grow Your Brand with Agencio</h1>
+        <p class="lead my-3">
+          We craft innovative digital experiences that elevate your business and engage your audience.
         </p>
-        <p>Feel free to download or copy-and-paste any parts of this example.</p>
-
-        <hr class="col-1 my-4">
-
-        <a href="https://getbootstrap.com" class="btn btn-primary">Read the Bootstrap docs</a>
-        <a href="https://github.com/twbs/examples" class="btn btn-secondary">View on GitHub</a>
+        <a href="#contact" class="btn btn-lg btn-light fw-semibold" role="button" aria-label="Get Started with Agencio">
+          Get Started
+        </a>
       </div>
-    </div>
+    </header>
 
- 
-        <!--
-          PANDA ELEMENT SELECTION SCRIPT
-          ===============================
-          Captures all element clicks inside the iframe and sends metadata to Bubble via postMessage.
-          Metadata captured: url, width, height, alt
-            ⚠ Do NOT remove or modify this script unless explicitly instructed by the admin.
-        -->
-        <script src="https://bfwqdadlcyndtaqmqtci.supabase.co/storage/v1/object/public/pandajs/panda-element-selection.js" defer></script>
+    <main>
+      <section id="services" class="py-5">
+        <div class="container">
+          <h2 class="mb-4 text-center fw-bold">Our Services</h2>
+          <div class="row g-4">
+            <article class="col-md-4 text-center">
+              <img src="https://pixabay.com/get/g91834cf54c1c03b84703f791bbceb2d10ba130ec9dda033b6e5d41582efe27321ea63425900abf6d789b03095781aee7_640.jpg" alt="Digital marketing icon" class="mb-3" />
+              <h3 class="fs-4 fw-semibold">Digital Marketing</h3>
+              <p>Create targeted marketing campaigns that convert and amplify your online presence.</p>
+            </article>
+            <article class="col-md-4 text-center">
+              <img src="https://pixabay.com/get/g98276eb41fe52a1a5a0ab106c7f18a9e92d9bbedc6701441fa4fb19eb0065a4efdd256deb5d37fe09b4d526ea7b94c2221cba0a21792ef8d48537999c04710c9_640.jpg" alt="Branding icon" class="mb-3" />
+              <h3 class="fs-4 fw-semibold">Branding & Design</h3>
+              <p>Develop strong brand identities that resonate deeply with your audience.</p>
+            </article>
+            <article class="col-md-4 text-center">
+              <img src="https://pixabay.com/get/gd115876175b882a0e3a799338700e5a33c96ba1a0076567713200940d728663d27dc67b0033c2a3604e8f8d33ef3c6138e3c66cec642e714fe7101b39930a765_640.png" alt="Web development icon" class="mb-3" />
+              <h3 class="fs-4 fw-semibold">Web Development</h3>
+              <p>Build responsive, accessible websites tailored to provide seamless user experiences.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <!--
-          PANDA BRANDING SCRIPT
-          ====================
-          Handles Panda-specific branding, logos, placeholders, and runtime injection for the iframe/editor.
-            ⚠ Do NOT remove or modify this script unless explicitly instructed by the admin.
-        -->
-        <script src="https://bfwqdadlcyndtaqmqtci.supabase.co/storage/v1/object/public/pandajs/panda-branding.js" defer></script>
-        <!--
-          PANDA AUTO RELOAD SCRIPT
-          ====================
-          Handles Panda HMR solution built on railway to hot reload changes in preview.
-            ⚠ Do NOT remove or modify this script unless explicitly instructed by the admin.
-        -->
-        <script>
-        const es = new EventSource("/__hmr");
-        es.onmessage = () => location.reload();
-        </script>
+      <section id="about" class="bg-light py-5">
+        <div class="container">
+          <h2 class="mb-4 text-center fw-bold">About Agencio</h2>
+          <p class="lead text-center mx-auto col-lg-8">
+            Founded by Chirag Dodiya, Agencio is dedicated to delivering creative digital solutions that make a meaningful impact.
+            Our collaborative approach ensures your vision becomes reality.
+          </p>
+        </div>
+      </section>
 
+      <section id="testimonials" class="py-5">
+        <div class="container">
+          <h2 class="mb-4 text-center fw-bold">What Our Clients Say</h2>
+          <div class="row g-4">
+            <figure class="col-md-4">
+              <blockquote class="blockquote">
+                <p>Agencio transformed our online presence and boosted our sales. The team is professional and creative.</p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                Amanda Lee, CEO of TechCorp
+              </figcaption>
+            </figure>
+            <figure class="col-md-4">
+              <blockquote class="blockquote">
+                <p>The branding work was exceptional and really helped us stand out in a crowded market.</p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                Michael Tan, Founder of GreenLeaf
+              </figcaption>
+            </figure>
+            <figure class="col-md-4">
+              <blockquote class="blockquote">
+                <p>Reliable, insightful, and talented — a great partner for our web development needs.</p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                Sarah Kim, Marketing Director at BrightWave
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
 
+      <section id="contact" class="bg-light py-5">
+        <div class="container">
+          <h2 class="mb-4 text-center fw-bold">Get in Touch</h2>
+          <form class="mx-auto" style="max-width: 540px" method="post" action="mailto:hi@chirag.co" aria-label="Contact form to send message to Agencio">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="Your full name"
+                required
+                aria-required="true"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+                aria-required="true"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Write your message here"
+                required
+                aria-required="true"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" aria-label="Send message to Agencio">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-light py-4">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p class="mb-2 mb-md-0">&copy; 2024 Agencio. All rights reserved.</p>
+        <address class="mb-0">
+          <a href="mailto:hi@chirag.co" class="text-light text-decoration-none" aria-label="Email Agencio">
+            hi@chirag.co
+          </a>
+        </address>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoY6lj3+Rb6uxLpVz4ChbN4Ju5HYlZ8r+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- PANDA ELEMENT SELECTION SCRIPT -->
+    <script
+      src="https://bfwqdadlcyndtaqmqtci.supabase.co/storage/v1/object/public/pandajs/panda-element-selection.js"
+      defer
+    ></script>
+
+    <!-- PANDA BRANDING SCRIPT -->
+    <script
+      src="https://bfwqdadlcyndtaqmqtci.supabase.co/storage/v1/object/public/pandajs/panda-branding.js"
+      defer
+    ></script>
+
+    <!-- PANDA AUTO RELOAD SCRIPT -->
+    <script>
+      const es = new EventSource("/__hmr");
+      es.onmessage = () => location.reload();
+    </script>
   </body>
 </html>
