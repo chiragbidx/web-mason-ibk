@@ -1,7 +1,66 @@
 /*
- * Custom CSS
+ * Custom CSS for Agencio agency landing page
  */
 
 :root {
   --bs-body-bg: var(--bs-gray-100);
+}
+
+body {
+  background-color: var(--bs-body-bg);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-image: url("https://pixabay.com/get/gc0026997f7552fa6b48239d3400c75468071e980bdc24835aaa0e858664957973e3131b18c9c708406288d5256a837ca_640.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+header a.btn {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header a.btn:hover,
+header a.btn:focus {
+  background-color: #f8f9fa;
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+#services article img {
+  filter: grayscale(30%);
+  transition: filter 0.3s ease;
+}
+
+#services article:hover img,
+#services article:focus-within img {
+  filter: grayscale(0%);
+}
+
+blockquote {
+  font-style: italic;
+  border-left: 4px solid #0d6efd;
+  padding-left: 1rem;
+  color: #333;
+}
+
+footer {
+  font-size: 0.9rem;
+}
+
+form input,
+form textarea {
+  box-shadow: none !important;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  outline: none;
 }
