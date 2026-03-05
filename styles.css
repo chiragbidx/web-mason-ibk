@@ -1,5 +1,5 @@
 /*
- * Custom CSS for Agencio agency landing page
+ * Custom CSS for Agencio agency landing page - Improved design
  */
 
 :root {
@@ -10,31 +10,56 @@ body {
   background-color: var(--bs-body-bg);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
+  color: #212529;
 }
 
-header {
-  background-image: url("https://pixabay.com/get/gc0026997f7552fa6b48239d3400c75468071e980bdc24835aaa0e858664957973e3131b18c9c708406288d5256a837ca_640.jpg");
+.hero-section {
+  background-image: url("https://pixabay.com/get/gb088c601665ffe0f61c8cde1d7faa963fcadec2abfc41eca337df7e95992bb54c45d6b602f36e2be69fcadab4e478d45_640.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.85);
+  min-height: 600px;
+  display: flex;
+  align-items: center;
 }
 
-header a.btn {
+.hero-section h1 {
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.9);
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+.hero-section a.btn {
   transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.35);
 }
 
-header a.btn:hover,
-header a.btn:focus {
+.hero-section a.btn:hover,
+.hero-section a.btn:focus {
   background-color: #f8f9fa;
   color: #0d6efd;
   text-decoration: none;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.55);
 }
 
 #services article img {
   filter: grayscale(30%);
   transition: filter 0.3s ease;
+  max-width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 #services article:hover img,
@@ -42,25 +67,87 @@ header a.btn:focus {
   filter: grayscale(0%);
 }
 
+#services article h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+#services article p {
+  color: #6c757d;
+  font-size: 1rem;
+}
+
 blockquote {
   font-style: italic;
   border-left: 4px solid #0d6efd;
-  padding-left: 1rem;
-  color: #333;
+  padding-left: 1.25rem;
+  color: #343a40;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 6px rgba(13, 110, 253, 0.1);
+  border-radius: 0.25rem;
+}
+
+blockquote p {
+  margin-bottom: 0;
+}
+
+figcaption {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #6c757d;
+  text-align: right;
 }
 
 footer {
   font-size: 0.9rem;
 }
 
+footer a {
+  transition: color 0.3s ease;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
 form input,
 form textarea {
   box-shadow: none !important;
+  border-radius: 0.375rem;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 form input:focus,
 form textarea:focus {
   border-color: #0d6efd;
-  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
   outline: none;
+}
+
+form label {
+  font-weight: 600;
+}
+
+form button.btn-primary {
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.4);
+  border-radius: 0.375rem;
+}
+
+form button.btn-primary:hover,
+form button.btn-primary:focus {
+  box-shadow: 0 6px 15px rgba(13, 110, 253, 0.6);
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
 }
